@@ -7,9 +7,9 @@ function App() {
   const [tareas, setearTareas] = useState(() => {
     try {
       const tareasEnLocalStorage = localStorage.getItem("tareas");
-      return tareasEnLocalStorage ? JSON.parse(tareasEnLocalStorage) : null;
+      return tareasEnLocalStorage ? JSON.parse(tareasEnLocalStorage) : [];
     } catch (error) {
-      return null;
+      return [];
     }
   });
 
